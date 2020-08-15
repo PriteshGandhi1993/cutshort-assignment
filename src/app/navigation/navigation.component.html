@@ -1,0 +1,53 @@
+<div class="navigation__container">
+    <div class="navigation__profile-container">
+      <div class="navigation__profile-image-container">
+        <img src='../../assets/profile.jpg' class="navigation__profile-image"/>
+        <div  class="navigation__settings-image">
+          <img src='../../assets/settings.svg'/>
+        </div>
+      </div>
+      <div class="navigation__name-container">
+        <p class="navigation__name">Martha Blair </p>
+        <div class="navigation__online-status"></div>
+      </div>
+      <p class="navigation__sub-title">Developer</p>
+    </div>
+    
+    <div class="navigation__divider"></div>
+    <div class="navigation__accordian-menu">
+      <app-accordian-menu
+        [options]="options" 
+        [menus]="accordianMenus">
+      </app-accordian-menu>
+    </div>
+  <nav class="navigation__navbar" [ngClass]="{'hidden': false }">
+    <ul class="navigation__navbar-ul">
+      <li *ngFor="let menu of navMenu; let firstMenu = first" class="navigation__nav-item">
+        <div class="navigation__nav-menu-container" [ngClass]="{'navigation__nav-menu-container-up-border': firstMenu}" href="#">
+          <img class="navigation__nav-item-icon" src='{{menu.icon.unselected}}'>
+          {{menu.name}}
+        </div>
+      </li>
+    </ul>
+    <ul class="navigation__navbar-ul">
+      <div class="navigation__recently-view-text"> RECENTLY VIEWED</div>
+      <li *ngFor="let menu of recentlyView;" class="navigation__recent-item">
+        <div class="navigation__recent-item-container" href="#">
+          {{menu.name}}
+          <img class="navigation__recent-item-icon" src='../../assets/right-arrow-long.svg'>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+
+  <div class="navigation__bottom-container">
+    <div class="navigation__divider"></div>
+    <div class="navigation__bottom-title">
+      Page: dribble.com/janlosert
+    </div>
+    <div class="navigation__bottom-desc">
+      575940-1811
+    </div>
+  </div>
+</div>

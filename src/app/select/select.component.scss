@@ -1,0 +1,60 @@
+.selectdiv {
+  position: relative;
+  
+  float: left;
+  min-width: 88px;
+}
+
+select::-ms-expand {
+display: none;
+}
+
+.selectdiv:after {
+  content: '\25C2 \25B8';
+  font: 14px monospace;
+  color: #9fa0a5;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  
+  top: 8px;
+  padding: 0 0 2px;
+  
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 36px;
+  float: right;
+  padding: 0px 24px 0px 12px;
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 1.75;
+  color: #3e3f43;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+
+.select-option-logo {
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+}
+
+.selectdiv select:focus {
+  outline: none;
+}

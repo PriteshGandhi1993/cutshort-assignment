@@ -1,0 +1,28 @@
+<div class="stat-cards__container">
+  <div class="stat-cards__title">{{ header }}</div>
+  <div class="stat-cards__count">{{ count }}</div>
+  <div class="stat-cards__change-rate">
+    <div [ngClass]="{'stat-cards__change-rate-green': changeRate >= 0, 'stat-cards__change-rate-red': changeRate < 0}">
+      <span *ngIf="changeRate>=0">+</span>{{ changeRate }}%
+    </div>
+    <div [ngClass]="{'stat-cards__arrow-green': changeRate>=0, 'stat-cards__arrow-red': changeRate<0}">
+    </div>  
+  </div>
+  <div class="stat-cards__graph">
+    <app-common-chart
+      [graphType]="'area'"
+      [noOfSeries]="12"
+      [xAxisLabel]="''"
+      [range]="rangeOfNumbers"
+      [graphColor]="randomGraphColor"
+      [displayXAxis]="false"
+      [displayYAxis]="false"
+      [graphHeight]="120"
+      [opacity]=0.5
+      [showGrid]= false
+      [graphWidth]="214"
+
+    ></app-common-chart>
+  </div>
+
+</div>

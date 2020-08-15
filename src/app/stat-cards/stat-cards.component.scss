@@ -1,0 +1,91 @@
+.stat-cards {
+    &__container {
+        padding: 22px 14px 0px 14px;
+        text-align: center;
+        border: 1px #eaedf4 solid;//eaedf4
+        box-shadow: 0px 0px 4px #eaedf4;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    &__title {
+        color: #a6a7ab;
+        font-size: 12px;
+        font-family: 'Roboto';
+        font-weight: 400;
+    }
+
+    &__count {
+        font-size: 24px;
+        font-family: 'Roboto';
+        font-weight: 400;
+        margin-top: 12px;
+    }
+    &__change-rate {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+    }
+
+    &__change-rate-green {
+        color: #33aa44;
+        font-size: 14px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        margin-right: 24px;
+    }
+    
+    &__change-rate-red {
+        color: #e7492e;
+        font-size: 14px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        margin-right: 24px;
+    }
+
+    &__arrow-container-green {
+        border: 2px #33aa44 solid;
+        border-radius: 4px;
+    }
+
+    &__arrow-container-red {
+        border: 2px #e7492e solid;
+        border-radius: 4px;
+    }
+    &__arrow-green {
+        background-image: url('../../assets/arrow-north-east.svg');
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 8px;
+        font-weight: 900;
+        color: #33aa44;
+        border: 2px #33aa44 solid;
+        border-radius: 4px;
+        position: absolute;
+        pointer-events: none;
+        margin-left: 54px;
+    }
+
+     &__arrow-red {
+        background-image: url('../../assets/arrow-south-west.svg');
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 8px;
+        font-weight: 900;
+        color: #e7492e;
+        border: 2px #e7492e solid;
+        border-radius: 4px;
+        position: absolute;
+        pointer-events: none;
+        margin-left: 54px;
+    }
+
+    &__graph {
+        margin-bottom: -4px;
+        margin-top: -16px;
+    }
+}

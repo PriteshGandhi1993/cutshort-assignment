@@ -1,0 +1,50 @@
+.main-page {
+    &__container {
+        height:100%;
+    }
+
+    &__nav-header-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__navigation {
+        min-width: 260px;
+    }
+
+    &__nav-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__content-container {
+        width: 100%;
+        margin: 24px 24px 0px 24px;
+        background-color: #fdfdfd;//fcf8f3
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 24px;
+        justify-content: space-between;
+        background-color: #fdfdfd;//fcf8f3
+    }
+
+    &__stats-data-container {
+        background-color: #fdfdfd;//fcf8f3
+        margin-top: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+.row {
+    height: 100%;
+}
+
+p {
+    margin:0px;
+}

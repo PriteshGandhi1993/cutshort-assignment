@@ -1,0 +1,23 @@
+.header {
+    &__container {
+        display: flex;
+        flex-direction: row;
+        height: 64px;
+        border-bottom: 1px #eaedf4 solid;//eaedf4
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        margin-left: 28px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Roboto';
+        color: #3e3f43;
+    }
+
+    &__language {
+        margin-left: auto;
+        padding: 14px 24px;
+    }
+}

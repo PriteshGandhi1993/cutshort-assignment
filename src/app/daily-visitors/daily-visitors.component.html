@@ -1,0 +1,30 @@
+<div class="daily-visitors__container">
+  <div class="daily-visitors__header">
+    Daily Visitors
+    <div class="daily-visitors__select-container">
+      <app-select class="daily-visitors__select"
+        [options]="months"
+        (change)="monthChange(e)">
+      </app-select>
+      <app-select class="daily-visitors__select"
+        [options]="years"
+        (change)="yearChange(e)">
+      </app-select>
+    </div>
+  </div>
+  <div class="daily-visitors__divider"></div>
+  <div class="daily-visitors__graph-container">
+    <app-common-chart
+      [graphType]="'bar'"
+      [noOfSeries]="31"
+      [xAxisLabel]="getLabel()"
+      [range]="rangeOfNumbers"
+      [graphColor]="'#1565d8'"
+      [displayXAxis]="true"
+      [displayYAxis]="true"
+      [graphHeight]="240"
+      [opacity]=1
+      [showGrid]=true
+    ></app-common-chart>
+  </div>
+</div>

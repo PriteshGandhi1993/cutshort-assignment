@@ -1,0 +1,16 @@
+
+<div class="header__container">
+  <div>
+    <app-page-icon></app-page-icon>
+  </div>
+  <div class="header__title">
+      {{headerText}}
+  </div>
+  <div class="header__language">
+    <app-select
+      [options] = "dropDownOptions"
+      [displayIcons] = "true"
+      [default] = "dropDownOptions[0].value">
+    </app-select>
+  </div>
+</div>

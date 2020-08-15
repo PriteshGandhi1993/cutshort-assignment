@@ -1,0 +1,16 @@
+<ul id="accordion" class="accordion" >
+  <li *ngFor="let menu of menus; let i = index; let lastMenu = last;" 
+    [class.active]="menu.active">
+    <div class="menu" (click)="toggle(i)">
+      <img class="menu__icon" [src]='menus[i].active ? menu.icon.selected : menu.icon.unselected'>
+      {{ menu.name }}
+      <img class="arrow" [ngClass]="{'arrow__selected':menus[i].active, 'arrow__unselected': !menus[i].active}" src="../../assets/arrow-drop-down.svg">
+    </div>
+    <ul class="submenu" #submenu 
+      [style.height.px]="menu.active ? submenu.scrollHeight : 0" >
+      <li *ngFor="let submenu of menu.submenu;let lastMenu = last;let j = index;" [ngClass]="{'menu-last-item':lastMenu}">
+        <div (click)="subMenuClicked(i,j)" [ngClass]="{'submenu-active': menus[i].submenu[j].active, 'submenu-inactive': !menus[i].submenu[j].active}">{{ submenu.name }}</div>
+      </li>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,22 @@
+.page-icon{
+    &__container {
+        background-color: #FFFFFF;
+        height: 100%;
+        border-bottom: 1px #eaedf4 solid;//fcf8f3
+        border-right: 1px #eaedf4 solid;//fcf8f3
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icon-container {
+        background-image: url('../../assets/home-icon.svg');
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 260px;
+        height: 20px;
+    }
+}
+
+p {
+}

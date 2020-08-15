@@ -1,0 +1,9 @@
+<div class="selectdiv">
+  <label>
+    <select class="custom-select" (change)="valueChanged($event)"> 
+      <option class="select-option" *ngFor="let menu of options" [value]="menu.value">
+        {{menu.name}}
+      </option>
+    </select>
+  </label>
+</div>

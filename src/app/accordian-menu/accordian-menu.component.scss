@@ -1,0 +1,128 @@
+.accordion {
+    width: 100%;
+    max-width: 260px;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px;
+    margin-left: 0px;
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-inline-start: 0px;
+}
+
+.accordion .menu {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 0px 12px 0px;
+    color: #3e3f43;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Roboto';
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-left: 0px;
+    list-style: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-inline-start: 0px;
+}
+
+.accordion .menu-last-item {
+    padding-bottom: 16px;
+}
+
+.arrow {
+    margin-left: auto;
+    width: 12px;
+    height: 12px;
+    &__selected {
+        transform: rotate(0);
+        transition: all 0.4s ease;    }
+
+    &__unselected {
+        transform: rotate(-90deg);
+        transition: all 0.4s ease;    }
+}
+
+.menu__icon {
+    padding-right: 12px;
+}
+
+.accordion li:last-child .menu {
+    border-bottom: 0;
+}
+
+.accordion li {
+    list-style: none;
+    color: #a6a7ab;
+}
+
+.ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-inline-start: 0px;
+}
+
+.accordion li.active .menu {
+    color: #3e3f43;
+    font-weight: 600;
+}
+
+.accordion li.active i {
+    color: #1565d8;
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    font-size: 14px;
+    transition: height 0.4s ease;
+    padding-left: 0px;
+}
+
+.submenu li {
+    border-bottom: 1px solid #ffffff;
+}
+
+.accordion li:last-child .submenu {
+    border-radius: 0 0 4px 4px;
+}
+
+.accordion li:last-child .submenu li:last-child {
+    border-bottom: 0;
+}
+
+.submenu div {
+    display: block;
+    cursor: pointer;
+    padding: 12px;
+    padding-left: 40px;
+    transition: all 0.25s ease-in-out;
+}
+
+.submenu div:hover {
+    color: #1565d8;
+    font-weight: 600;
+}
+
+.submenu-active {
+    color: #1565d8;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.submenu-inactive {
+    color: #828385;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+}

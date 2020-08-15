@@ -1,0 +1,38 @@
+<div class="most-visited__table">
+  <div class="most-visited__header">
+      {{ title }}
+  </div>
+  <table class="most-visited__table-container">
+    <tr class="most-visited__table-row">
+      <th *ngFor="let column of headers" class="most-visited__table-header">
+        {{ column.name }}        
+      </th>
+    </tr>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let column of headers" class="most-visited__table-data">
+        <div *ngIf="column.type === 'text'">{{ row[column.value] }}</div>
+        <img *ngIf="column.type === 'image'" src="../../assets/link-icon.svg">
+        <div 
+            style="margin: -36px 16px -36px -56px;"
+            *ngIf="column.type === 'graph'">
+          <app-common-chart
+            [graphType]="'area'"
+            [noOfSeries]="12"
+            [xAxisLabel]="''"
+            [range]="rangeOfNumbers"
+            [graphColor]="'#1565d8'"
+            [displayXAxis]="false"
+            [displayYAxis]="false"
+            [graphHeight]="80"
+            [opacity]=0.5
+            [showGrid]= false
+            [graphWidth]="104"
+          ></app-common-chart>
+        </div>
+        <progress *ngIf="column.type === 'progress'" value="{{row['value']}}" max="4000" class="most-visited__progress"></progress>
+
+      </td>
+    </tr>
+    
+  </table>
+</div>
