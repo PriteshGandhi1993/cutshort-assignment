@@ -12,14 +12,22 @@ export class MostVisitedPageComponent implements OnInit {
   @Input('showProgress') showProgress: boolean;
   @Input('title') title: string;
   
+  filtersLoaded: Promise<boolean>;
+
   rangeOfNumbers= {
     max: 10,
-    min: 1
+    min: 4
   };
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.filtersLoaded = Promise.resolve(true);
+    }, 2000);
   }
 
 }

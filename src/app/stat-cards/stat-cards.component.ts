@@ -10,7 +10,8 @@ export class StatCardsComponent implements OnInit {
   @Input('count') count: string;
   @Input('changeRate') changeRate: number;
   @Input('graphColor') graphColor: string;
-
+  @Input('borderColor') borderColor: string;
+  
   rangeOfNumbers= {
     max: 10,
     min: 1
@@ -20,7 +21,7 @@ export class StatCardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.randomGraphColor = this.generateRandomColor();
+    this.randomGraphColor = this.graphColor;
     console.log("header: ",this.header);
     console.log("count: ",this.count);
     console.log("change rate: ",this.changeRate);

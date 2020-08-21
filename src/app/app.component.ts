@@ -13,22 +13,30 @@ export class AppComponent {
     {
       header: "REALTIME USERS",
       count: "56",
-      changeRate: 9.8
+      changeRate: 9.8,
+      graphColor: "#e7effa",
+      borderColor: "#1764d8"
     },
     {
       header: "TOTAL VISITS",
       count: "54,598",
-      changeRate: -11.9
+      changeRate: -11.9,
+      graphColor: "#eaf6ec",
+      borderColor: "#34ab43"
     },
     {
       header: "BOUNCE RATE",
       count: "73.67%",
-      changeRate: 12.2
+      changeRate: 12.2,
+      graphColor: "#efeefe",
+      borderColor: "#6859f4"
     },
     {
       header: "VISIT DURATION",
       count: "1m 4s",
-      changeRate: 19.6
+      changeRate: 19.6,
+      graphColor: "#fefaee",
+      borderColor: "#f9cf56"
     }
   ];
 

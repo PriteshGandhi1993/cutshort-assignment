@@ -4,9 +4,12 @@
         border-radius: 4px;
         width: fit-content;
         background-color: white;
+        width: 100%;
+        height: 100%;
     }
     &__table-container {
         border-collapse: collapse;
+        width: 100%;
     }
     &__header {
         height: 64px;
@@ -21,7 +24,7 @@
 
     &__table-row {
         border-top: 1px #eaedf4 solid;//eaedf4
-
+        height: auto;
     }
 
     &__table-header {
@@ -32,13 +35,14 @@
         padding: 8px;
         text-align: left;
         padding-left: 28px;
-
+        white-space: nowrap;
     }
 
     &__table-data {
-        padding: 20px 0px 20px 26px;
+        padding: 20px 0px 20px 29px;
         border-top: 1px #eaedf4 solid;//eaedf4
-
+        white-space: nowrap;
+        font-size: 14px;
     }
 
     &__divider {
@@ -47,17 +51,19 @@
         background-color: #eaedf4;//eaedf4
     }
 
-    
+    &__table-data-row {
+        height: auto;
+    }
 }
 
 progress {
     border-radius: 50%;
-    width: 104px;
     margin: 12px 24px 12px -32px;
     height: 4px;
     box-shadow: none;
     border: none;
     background-color: white;
+    width: 96px;
 }
 
 progress::-webkit-progress-bar {

@@ -36,9 +36,26 @@
         margin-top: 24px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+    }
+	
+	&__card-holder {
+        flex: 100%;
+    }
+
+    &__card-holder-margin {
+        margin-left: 24px;
+    }
+
+    &__most-visited {
+        width: 68%;
+        margin-right: 24px;
+    }
+
+    &__most-visited-social {
+        width: 32%
     }
 }
+
 
 
 .row {

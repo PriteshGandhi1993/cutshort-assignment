@@ -11,20 +11,26 @@
     <div class="main-page__content-container">
       <app-daily-visitors></app-daily-visitors>
       <div class="main-page__cards-container">
-        <app-stat-cards *ngFor="let card of statCards;"
+        <div *ngFor="let card of statCards; let firstItem = first;" [ngClass]="{'main-page__card-holder-margin': !firstItem}" class="main-page__card-holder">
+          <app-stat-cards
           [header]="card.header"
           [count]="card.count"
           [changeRate]="card.changeRate"
+          [graphColor]="card.graphColor"
+          [borderColor]="card.borderColor"
         ></app-stat-cards>
+        </div>
       </div>
       <div class="main-page__stats-data-container">
         <app-most-visited-page
+          class="main-page__most-visited"
           [title]="'Most Visited Pages'"
           [headers]="mostViewedHeaders"
           [data]="mostViewedData"
           [showGraph]="true"
         ></app-most-visited-page>
         <app-most-visited-page
+          class="main-page__most-visited-social"
           [title]="'Social Media Traffic'"
           [headers]="socialHeaders"
           [data]="socialData"

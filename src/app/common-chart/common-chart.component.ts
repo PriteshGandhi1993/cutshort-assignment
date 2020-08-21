@@ -53,6 +53,7 @@ export class CommonChartComponent implements OnInit {
   @Input('opacity') opacity: number;
   @Input('showGrid') showGrid: boolean;
   @Input('graphWidth') graphWidth: number;
+  @Input('borderColor') borderColor: string;
 
   @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
@@ -68,7 +69,7 @@ export class CommonChartComponent implements OnInit {
     console.log("xAxisLabel: ",this.xAxisLabel);
     console.log("range: ",this.range, this.range);
     console.log("graphColor", this.graphColor);
-    
+    this.borderColor = this.borderColor? this.borderColor : '#1565d8';
     let seriesData = [];
     let xaxisSeries = [];
     let xAxisLabelFontColor = [];
@@ -193,7 +194,11 @@ export class CommonChartComponent implements OnInit {
       },
 
       stroke: {
-        width: 0,
+        show: true,
+        lineCap: 'butt',
+        colors: [this.borderColor],
+        width: 2,
+        dashArray: 0,     
         curve: 'straight',
       },
       fill: {

@@ -77,7 +77,7 @@ export class NavigationComponent implements OnInit {
       submenu: null
     },
     { 
-      name: 'Customer Minerva Viewer',
+      name: 'Customer: Minerva Viewer',
       icon: null,
       active: false,
       submenu: null
